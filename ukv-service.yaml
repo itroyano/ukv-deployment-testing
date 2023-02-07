@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: ukv
+  name: ukv
+spec:
+  ports:
+  - name: db
+    port: 38709
+    protocol: TCP
+    targetPort: 38709
+  selector:
+    app: ukv
+  type: ClusterIP
+
