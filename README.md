@@ -9,4 +9,4 @@ oc new-project ukv-test
 ### create a deployment and a service of Unum UKV
 oc apply -f .
 ### run a test pod with the client to try connect to the db
-oc run dbtest --image=quay.io/itroyano/test-ukv-db:0.0.1
+oc run dbtest --image=quay.io/itroyano/test-ukv-db:0.0.2
