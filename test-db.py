@@ -1,5 +1,7 @@
+import os
 import ukv.flight_client as client
-print("connecting to db at ukv.ukv-test.svc.cluster.local:38709")
-db = client.DataBase('grpc://ukv.ukv-test.svc.cluster.local:38709')
+serverUri = os.environ.get('SERVER_URL')
+print("connecting to db at " + serverUri)
+db = client.DataBase('grpc://' + serverUri)
 db.main[42] = 'Hello World!'
 print(db.main[42])
